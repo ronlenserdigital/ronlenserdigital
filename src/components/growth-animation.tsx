@@ -1,9 +1,12 @@
 "use client"
-import { motion, useMotionTemplate, useMotionValue, useTransform, useSpring } from "framer-motion"
-import { MouseEvent, useEffect, useState } from "react"
+import { motion, useMotionTemplate, useMotionValue, useTransform, useSpring, useInView } from "framer-motion"
+import { MouseEvent, useEffect, useState, useRef } from "react"
 import { Code2, BarChart3, Globe, ShieldCheck } from "lucide-react"
 
 export default function GrowthAnimation() {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const isInView = useInView(containerRef, { once: true, margin: "-50px" })
+
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
 
@@ -57,6 +60,7 @@ export default function GrowthAnimation() {
 
   return (
     <div 
+      ref={containerRef}
       className="relative aspect-square md:aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 glass-panel group [perspective:1000px]"
       onMouseMove={handlePointerMove}
       onMouseLeave={handlePointerLeave}
@@ -90,7 +94,7 @@ export default function GrowthAnimation() {
         {/* Center Dashboard Mockup */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
           transition={{ duration: 0.8 }}
           className="w-full max-w-[340px] h-[240px] rounded-xl border border-white/10 bg-black/80 backdrop-blur-md shadow-2xl relative p-6 flex flex-col"
           style={{ transform: "translateZ(30px)" }}
@@ -113,14 +117,14 @@ export default function GrowthAnimation() {
                  stroke="#fff"
                  strokeWidth="2"
                  initial={{ pathLength: 0 }}
-                 whileInView={{ pathLength: 1 }}
+                 animate={isInView ? { pathLength: 1 } : { pathLength: 0 }}
                  transition={{ duration: 2, ease: "easeInOut", delay: 0.5 }}
                />
                <motion.path 
                  d={`M0,60 L0,50 C20,50 40,20 60,30 C80,40 100,10 120,5 C140,0 160,25 200,10 L200,60 Z`}
                  fill="url(#gradient)"
                  initial={{ opacity: 0 }}
-                 whileInView={{ opacity: 1 }}
+                 animate={isInView ? { opacity: 1 } : { opacity: 0 }}
                  transition={{ duration: 2, delay: 0.5 }}
                />
                <defs>
@@ -135,7 +139,7 @@ export default function GrowthAnimation() {
 
         {/* Floating Card 1: Code/Speed */}
         <motion.div 
-          className="absolute -top-12 -left-12 w-[180px] p-4 rounded-lg border border-white/10 bg-white/5 backdrop-blur-md shadow-xl"
+          className="absolute top-4 left-4 md:-top-4 md:-left-4 lg:-top-8 lg:-left-8 w-[140px] md:w-[180px] p-3 md:p-4 rounded-lg border border-white/10 bg-white/5 backdrop-blur-md shadow-xl"
           style={{ transform: "translateZ(60px)" }}
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
@@ -146,16 +150,16 @@ export default function GrowthAnimation() {
            </div>
            {mounted && (
              <div className="text-[8px] text-neutral-400 font-mono space-y-1">
-               <motion.div initial={{ width: 0 }} whileInView={{ width: "100%" }} className="h-1 bg-white/30 rounded-full overflow-hidden" />
-               <motion.div initial={{ width: 0 }} whileInView={{ width: "80%" }} transition={{ delay: 0.2 }} className="h-1 bg-white/20 rounded-full overflow-hidden" />
-               <motion.div initial={{ width: 0 }} whileInView={{ width: "60%" }} transition={{ delay: 0.4 }} className="h-1 bg-white/10 rounded-full overflow-hidden" />
+               <motion.div initial={{ width: 0 }} animate={isInView ? { width: "100%" } : { width: 0 }} className="h-1 bg-white/30 rounded-full overflow-hidden" />
+               <motion.div initial={{ width: 0 }} animate={isInView ? { width: "80%" } : { width: 0 }} transition={{ delay: 0.2 }} className="h-1 bg-white/20 rounded-full overflow-hidden" />
+               <motion.div initial={{ width: 0 }} animate={isInView ? { width: "60%" } : { width: 0 }} transition={{ delay: 0.4 }} className="h-1 bg-white/10 rounded-full overflow-hidden" />
              </div>
            )}
         </motion.div>
 
         {/* Floating Card 2: Security/Trust */}
         <motion.div 
-          className="absolute -bottom-12 -right-8 w-[200px] p-4 rounded-lg border border-white/20 bg-white/10 backdrop-blur-md shadow-xl flex items-center gap-4"
+          className="absolute bottom-4 right-4 md:-bottom-4 md:-right-4 lg:-bottom-8 lg:-right-4 w-[160px] md:w-[200px] p-3 md:p-4 rounded-lg border border-white/20 bg-white/10 backdrop-blur-md shadow-xl flex items-center gap-3 md:gap-4"
           style={{ transform: "translateZ(80px)" }}
           animate={{ y: [0, 15, 0] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
