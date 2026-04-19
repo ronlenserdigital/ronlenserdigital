@@ -17,9 +17,12 @@ export default function Footer() {
             <p className="text-neutral-300 max-w-sm text-balance mb-6">
               Building high converting websites and automated booking systems for ambitious businesses.
             </p>
-            <p className="text-neutral-400 text-sm">
+            <p className="text-neutral-400 text-sm mb-2">
               Studio in Fredericksburg, VA
             </p>
+            <a href="tel:+15403956493" className="text-neutral-300 text-sm hover:text-white transition-colors">
+              (540) 395-6493
+            </a>
           </div>
           <div>
             <h4 className="text-white font-medium mb-6">Navigation</h4>
@@ -45,12 +48,12 @@ export default function Footer() {
             <h4 className="text-white font-medium mb-6">Socials</h4>
             <ul className="space-y-4">
               <li>
-                <a href="#" className="text-neutral-300 hover:text-white transition-colors">
+                <a href="https://www.facebook.com/remakerony" target="_blank" rel="noopener noreferrer" className="text-neutral-300 hover:text-white transition-colors">
                   Facebook
                 </a>
               </li>
               <li>
-                <a href="#" className="text-neutral-300 hover:text-white transition-colors">
+                <a href="https://www.linkedin.com/in/ron-lenser-09b0a83bb" target="_blank" rel="noopener noreferrer" className="text-neutral-300 hover:text-white transition-colors">
                   LinkedIn
                 </a>
               </li>

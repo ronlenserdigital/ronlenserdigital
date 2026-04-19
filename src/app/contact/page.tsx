@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion"
-import { ArrowRight, Mail, MapPin, CheckCircle2 } from "lucide-react"
+import { ArrowRight, Mail, MapPin, CheckCircle2, Phone } from "lucide-react"
 import FadeIn from "@/components/fade-in"
 
 // Animated Letters Component
@@ -36,12 +36,13 @@ const AnimatedLetters = ({ text }: { text: string }) => {
       animate="visible"
     >
       {words.map((word, wordIndex) => (
-        <span key={wordIndex} className="inline-block mr-3 md:mr-4 whitespace-nowrap">
+        <span key={wordIndex} className="inline-block whitespace-nowrap">
           {Array.from(word).map((letter, letterIndex) => (
             <motion.span variants={child} key={letterIndex} className="inline-block">
               {letter}
             </motion.span>
           ))}
+          <span className="inline-block w-3 md:w-4">&nbsp;</span>
         </span>
       ))}
     </motion.h1>
@@ -131,12 +132,25 @@ export default function ContactPage() {
             
             <FadeIn delay={0.8}>
               <p className="text-xl text-neutral-400 font-light mb-16 max-w-md">
-                We are currently accepting new projects for Q3. Fill out the form or reach out directly to begin the conversation.
+                Currently accepting 3 new client builds this month. I reply to every inquiry within 24 hours.
               </p>
             </FadeIn>
 
             <FadeIn delay={1}>
               <div className="space-y-10">
+                <div className="flex items-start gap-6 group">
+                  <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors duration-300">
+                    <Phone size={20} />
+                  </div>
+                  <div>
+                    <h4 className="text-sm tracking-widest uppercase text-neutral-500 mb-2">Phone</h4>
+                    <a href="tel:+15403956493" className="text-xl text-white hover:text-neutral-300 transition-colors block mb-1">
+                      (540) 395-6493
+                    </a>
+                    <span className="text-sm text-neutral-500">Call or text — fastest way to reach me</span>
+                  </div>
+                </div>
+
                 <div className="flex items-start gap-6 group">
                   <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors duration-300">
                     <Mail size={20} />
@@ -280,10 +294,10 @@ export default function ContactPage() {
                       className="w-full bg-transparent border-b border-white/20 py-4 text-neutral-500 focus:text-white focus:outline-none focus:border-white transition-colors appearance-none cursor-pointer"
                     >
                       <option value="" disabled hidden>Select Project Budget</option>
-                      <option value="under-10k" className="bg-neutral-900">Under $10k</option>
-                      <option value="10k-25k" className="bg-neutral-900">$10k - $25k</option>
-                      <option value="25k-50k" className="bg-neutral-900">$25k - $50k</option>
-                      <option value="50k+" className="bg-neutral-900">$50k+</option>
+                      <option value="starter" className="bg-neutral-900">Starter ($1k - $3k)</option>
+                      <option value="growth" className="bg-neutral-900">Growth ($3k - $7k)</option>
+                      <option value="scale" className="bg-neutral-900">Scale ($7k - $15k)</option>
+                      <option value="enterprise" className="bg-neutral-900">Enterprise ($15k+)</option>
                     </select>
                   </div>
 

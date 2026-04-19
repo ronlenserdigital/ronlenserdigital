@@ -201,7 +201,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative z-10 py-40 border-t border-white/5 overflow-hidden">
+      <section className="relative z-10 py-28 border-t border-white/5 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/5 via-black to-black" />
         <div className="container mx-auto px-6 md:px-12 relative z-10 text-center">
           <FadeIn>
