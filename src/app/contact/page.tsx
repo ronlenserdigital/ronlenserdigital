@@ -115,9 +115,9 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="bg-transparent min-h-screen relative pt-32">
-      <div className="container mx-auto px-6 md:px-12 py-20 lg:py-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+    <div className="bg-transparent min-h-screen relative pt-28 lg:pt-32">
+      <div className="w-full max-w-[1600px] mx-auto px-6 md:px-12 lg:px-20 pb-20 lg:pb-32 pt-4 lg:pt-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 xl:gap-32">
           
           {/* Left Column - Intro & Info */}
           <div>
