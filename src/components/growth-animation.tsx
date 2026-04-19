@@ -139,7 +139,7 @@ export default function GrowthAnimation() {
 
         {/* Floating Card 1: Code/Speed */}
         <motion.div 
-          className="absolute top-4 left-4 md:-top-4 md:-left-4 lg:-top-8 lg:-left-8 w-[140px] md:w-[180px] p-3 md:p-4 rounded-lg border border-white/10 bg-white/5 backdrop-blur-md shadow-xl"
+          className="absolute top-4 left-4 md:top-8 md:left-8 lg:top-12 lg:left-12 w-[140px] md:w-[180px] p-3 md:p-4 rounded-lg border border-white/10 bg-white/5 backdrop-blur-md shadow-xl z-20"
           style={{ transform: "translateZ(60px)" }}
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
@@ -159,7 +159,7 @@ export default function GrowthAnimation() {
 
         {/* Floating Card 2: Security/Trust */}
         <motion.div 
-          className="absolute bottom-4 right-4 md:-bottom-4 md:-right-4 lg:-bottom-8 lg:-right-4 w-[160px] md:w-[200px] p-3 md:p-4 rounded-lg border border-white/20 bg-white/10 backdrop-blur-md shadow-xl flex items-center gap-3 md:gap-4"
+          className="absolute bottom-4 right-4 md:bottom-8 md:right-8 lg:bottom-12 lg:right-12 w-[160px] md:w-[200px] p-3 md:p-4 rounded-lg border border-white/20 bg-white/10 backdrop-blur-md shadow-xl flex items-center gap-3 md:gap-4 z-20"
           style={{ transform: "translateZ(80px)" }}
           animate={{ y: [0, 15, 0] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
