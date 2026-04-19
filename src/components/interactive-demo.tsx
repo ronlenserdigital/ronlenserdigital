@@ -30,7 +30,7 @@ export default function InteractiveDemo() {
   }, [])
 
   return (
-    <div className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-2xl flex flex-col bg-[#F5F5F7] border border-white/10">
+    <div className="relative h-[480px] md:h-auto md:aspect-video w-full rounded-2xl overflow-hidden shadow-2xl flex flex-col bg-[#F5F5F7] border border-white/10">
       {/* Sleek Browser Frame */}
       <div className="w-full bg-neutral-900 border-b border-white/10 h-12 flex items-center px-4 gap-4 shrink-0 shadow-lg relative z-20">
         <div className="flex gap-2">
@@ -71,7 +71,7 @@ export default function InteractiveDemo() {
                 className="absolute inset-0 flex flex-col"
               >
                 {/* Mock Website Header */}
-                <div className="h-14 bg-white/80 backdrop-blur-md shadow-sm border-b border-neutral-100 flex items-center justify-between px-8 shrink-0 z-50 absolute top-0 w-full">
+                <div className="h-14 bg-white/80 backdrop-blur-md shadow-sm border-b border-neutral-100 flex items-center justify-between px-4 md:px-8 shrink-0 z-50 absolute top-0 w-full">
                    <div className="flex items-center gap-2">
                      <div className="w-6 h-6 bg-blue-600 rounded flex items-center justify-center shadow-md shadow-blue-500/20">
                        <MapPin className="w-3 h-3 text-white" />
@@ -87,7 +87,7 @@ export default function InteractiveDemo() {
                 </div>
                    
                 {/* Mock Website Hero */}
-                <div className="flex-1 flex flex-col md:flex-row items-center pt-20 pb-8 px-8 lg:px-16 gap-12 bg-white relative overflow-hidden h-full">
+                <div className="flex-1 flex flex-col md:flex-row items-center pt-16 md:pt-20 pb-6 md:pb-8 px-4 md:px-8 lg:px-16 gap-6 md:gap-12 bg-white relative overflow-hidden h-full">
                    
                    {/* Background Decorative Graphic */}
                    <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-blue-50/50 to-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 pointer-events-none" />
@@ -104,7 +104,7 @@ export default function InteractiveDemo() {
                       </div>
                       
                       <div className="space-y-4">
-                        <h1 className="text-4xl md:text-5xl font-black text-slate-900 leading-[1.1] tracking-tight font-[family-name:var(--font-outfit)]">
+                        <h1 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 leading-[1.1] tracking-tight font-[family-name:var(--font-outfit)]">
                           The #1 Roofing Experts in the Tri-State Area.
                         </h1>
                         <p className="text-sm text-slate-500 font-medium leading-relaxed max-w-sm">
@@ -202,7 +202,7 @@ export default function InteractiveDemo() {
               initial={{ opacity: 0, y: 20, scale: 0.9 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 20, scale: 0.9 }}
-              className="absolute bottom-8 right-8 glass-panel p-4 rounded-xl border border-white/20 flex items-center gap-4 bg-black/90 shadow-2xl z-50"
+              className="absolute bottom-4 left-4 right-4 md:left-auto md:bottom-8 md:right-8 glass-panel p-3 md:p-4 rounded-xl border border-white/20 flex items-center gap-3 md:gap-4 bg-black/90 shadow-2xl z-50"
             >
               <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center border border-green-500/30 shrink-0">
                 <Bell className="w-5 h-5 text-green-400" />
