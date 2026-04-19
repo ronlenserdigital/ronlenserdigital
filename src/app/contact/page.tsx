@@ -71,8 +71,8 @@ export default function ContactPage() {
     setFormState("submitting")
 
     const formData = new FormData(e.currentTarget)
-    // Replace this with your actual Web3Forms access key
-    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "YOUR_ACCESS_KEY_HERE")
+    // Using the hardcoded Web3Forms access key as provided
+    formData.append("access_key", "696c9f6c-786a-4a42-8c40-31d94aa00f27")
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -143,8 +143,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="text-sm tracking-widest uppercase text-neutral-500 mb-2">Email</h4>
-                    <a href="mailto:ronlenserdigital@gmail.com" className="text-xl text-white hover:text-neutral-300 transition-colors">
-                      ronlenserdigital@gmail.com
+                    <a href="mailto:hello@ronlenserdigital.com" className="text-xl text-white hover:text-neutral-300 transition-colors">
+                      hello@ronlenserdigital.com
                     </a>
                   </div>
                 </div>

@@ -29,7 +29,7 @@ export default function PrivacyPage() {
               Our full details are:<br/>
               Ron Lenser Digital<br/>
               Studio Location: Fredericksburg, VA<br/>
-              Email: ronlenserdigital@gmail.com
+              Email: hello@ronlenserdigital.com
             </p>
           </div>
         </FadeIn>
