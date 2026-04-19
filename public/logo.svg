@@ -1,0 +1,7 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Minimalist, geometric RL monogram -->
+  <!-- The R -->
+  <path d="M60 140V60H100C116.569 60 130 73.4315 130 90C130 101.826 123.155 112.051 113.111 116.63L140 140H116L93.3333 120H80V140H60ZM80 100H100C105.523 100 110 95.5228 110 90C110 84.4772 105.523 80 100 80H80V100Z" fill="white"/>
+  <!-- The L integrated smoothly -->
+  <path d="M60 140V160H140V140H60Z" fill="white"/>
+</svg>
