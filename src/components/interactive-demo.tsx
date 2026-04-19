@@ -30,7 +30,7 @@ export default function InteractiveDemo() {
   }, [])
 
   return (
-    <div className="relative h-[480px] md:h-auto md:aspect-video w-full rounded-2xl overflow-hidden shadow-2xl flex flex-col bg-[#F5F5F7] border border-white/10">
+    <div className="relative min-h-[650px] md:min-h-0 md:h-auto md:aspect-video w-full rounded-2xl overflow-hidden shadow-2xl flex flex-col bg-[#F5F5F7] border border-white/10">
       {/* Sleek Browser Frame */}
       <div className="w-full bg-neutral-900 border-b border-white/10 h-12 flex items-center px-4 gap-4 shrink-0 shadow-lg relative z-20">
         <div className="flex gap-2">
@@ -87,7 +87,7 @@ export default function InteractiveDemo() {
                 </div>
                    
                 {/* Mock Website Hero */}
-                <div className="flex-1 flex flex-col md:flex-row items-center pt-16 md:pt-20 pb-6 md:pb-8 px-4 md:px-8 lg:px-16 gap-6 md:gap-12 bg-white relative overflow-hidden h-full">
+                <div className="flex-1 flex flex-col md:flex-row items-center pt-16 md:pt-20 pb-6 md:pb-8 px-4 md:px-8 lg:px-16 gap-4 md:gap-12 bg-white relative overflow-hidden h-full overflow-y-auto">
                    
                    {/* Background Decorative Graphic */}
                    <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-blue-50/50 to-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 pointer-events-none" />
@@ -104,7 +104,7 @@ export default function InteractiveDemo() {
                       </div>
                       
                       <div className="space-y-4">
-                        <h1 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 leading-[1.1] tracking-tight font-[family-name:var(--font-outfit)]">
+                        <h1 className="text-2xl md:text-4xl lg:text-5xl font-black text-slate-900 leading-[1.1] tracking-tight font-[family-name:var(--font-outfit)]">
                           The #1 Roofing Experts in the Tri-State Area.
                         </h1>
                         <p className="text-sm text-slate-500 font-medium leading-relaxed max-w-sm">
@@ -139,7 +139,7 @@ export default function InteractiveDemo() {
                    </div>
                    
                    {/* Right Side (Visual Detail - Realistic Dashboard/Image Card) */}
-                   <div className="flex-1 h-full max-h-[340px] w-full hidden md:flex items-center justify-center relative z-10 perspective-1000 mt-8">
+                   <div className="flex-1 h-[280px] md:h-full max-h-[340px] w-full flex items-center justify-center relative z-10 perspective-1000 mt-4 md:mt-8">
                       <motion.div 
                         className="w-full h-full bg-slate-900 rounded-2xl shadow-2xl overflow-hidden border border-slate-700/50 flex flex-col"
                         initial={{ rotateY: -10, rotateX: 5 }}
