@@ -87,13 +87,13 @@ export default function InteractiveDemo() {
                 </div>
                    
                 {/* Mock Website Hero */}
-                <div className="flex-1 flex flex-col md:flex-row items-center pt-16 md:pt-20 pb-6 md:pb-8 px-4 md:px-8 lg:px-16 gap-4 md:gap-12 bg-white relative overflow-hidden h-full overflow-y-auto">
+                <div className="flex-1 flex flex-col md:flex-row items-center pt-14 md:pt-20 pb-6 md:pb-8 px-4 md:px-8 lg:px-16 gap-4 md:gap-12 bg-white relative overflow-hidden h-full overflow-y-auto">
                    
                    {/* Background Decorative Graphic */}
                    <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-blue-50/50 to-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 pointer-events-none" />
                    
                    {/* Left Side (Copy & Form) */}
-                   <div className="flex-1 space-y-6 relative z-10 max-w-lg mt-8">
+                   <div className="flex-1 space-y-4 md:space-y-6 relative z-10 max-w-lg mt-0 md:mt-8">
                       <div className="flex items-center gap-1">
                         <Star className="w-4 h-4 text-amber-400 fill-amber-400" />
                         <Star className="w-4 h-4 text-amber-400 fill-amber-400" />
