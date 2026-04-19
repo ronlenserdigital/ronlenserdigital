@@ -22,7 +22,7 @@ export default function Home() {
     <div ref={containerRef} className="bg-transparent relative">
 
       {/* Hero Section */}
-      <section className="relative z-10 min-h-screen flex items-center justify-center pt-24 pb-12 overflow-hidden">
+      <section className="relative z-10 min-h-screen flex items-center justify-center pt-24 pb-32 overflow-hidden">
         <div className="container mx-auto px-6 md:px-12 relative z-10">
           <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
             <FadeIn delay={0.1} className="mb-6">
@@ -64,7 +64,7 @@ export default function Home() {
 
         {/* Scroll Indicator */}
         <motion.div
-          className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-neutral-500 text-sm"
+          className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-neutral-500 text-sm"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
