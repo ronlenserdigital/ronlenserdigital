@@ -22,8 +22,25 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Ron Lenser Digital | Premium Agency",
+  metadataBase: new URL('https://ronlenserdigital.com'),
+  title: {
+    default: "Ron Lenser Digital",
+    template: "%s | Ron Lenser Digital"
+  },
   description: "Elite design, premium execution, growth, trust, precision, and modernity.",
+  openGraph: {
+    title: "Ron Lenser Digital",
+    description: "Custom websites that actually book clients.",
+    url: "https://ronlenserdigital.com",
+    siteName: "Ron Lenser Digital",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ron Lenser Digital",
+    description: "Custom websites that actually book clients.",
+  },
 };
 
 export default function RootLayout({

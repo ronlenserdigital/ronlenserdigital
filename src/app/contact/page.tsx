@@ -35,16 +35,19 @@ const AnimatedLetters = ({ text }: { text: string }) => {
       initial="hidden"
       animate="visible"
     >
-      {words.map((word, wordIndex) => (
-        <span key={wordIndex} className="inline-block whitespace-nowrap">
-          {Array.from(word).map((letter, letterIndex) => (
-            <motion.span variants={child} key={letterIndex} className="inline-block">
-              {letter}
-            </motion.span>
-          ))}
-          <span className="inline-block w-3 md:w-4">&nbsp;</span>
-        </span>
-      ))}
+      <span className="sr-only">{text}</span>
+      <motion.span aria-hidden className="flex flex-wrap">
+        {words.map((word, wordIndex) => (
+          <span key={wordIndex} className="inline-block whitespace-nowrap">
+            {Array.from(word).map((letter, letterIndex) => (
+              <motion.span variants={child} key={letterIndex} className="inline-block">
+                {letter}
+              </motion.span>
+            ))}
+            <span className="inline-block w-3 md:w-4">&nbsp;</span>
+          </span>
+        ))}
+      </motion.span>
     </motion.h1>
   );
 };

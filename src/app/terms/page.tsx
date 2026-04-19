@@ -8,29 +8,39 @@ export default function TermsPage() {
         <FadeIn>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 font-[family-name:var(--font-outfit)]">Terms of Service</h1>
           <div className="space-y-6 font-light leading-relaxed">
-            <p>Last updated: {new Date().toLocaleDateString()}</p>
+            <p><strong>Last updated:</strong> {new Date().toLocaleDateString()}</p>
             <p>
-              Please read these terms and conditions carefully before using Our Service.
+              Please read these terms and conditions carefully before using our services or website. By accessing or using the Service, you agree to be bound by these Terms.
             </p>
-            <h2 className="text-2xl text-white font-medium mt-8 mb-4">1. Acknowledgment</h2>
+
+            <h2 className="text-2xl text-white font-medium mt-8 mb-4">1. Scope of Services</h2>
             <p>
-              These are the Terms and Conditions governing the use of this Service and the agreement that operates between You and the Company. 
-              These Terms and Conditions set out the rights and obligations of all users regarding the use of the Service.
+              Ron Lenser Digital provides custom web development, digital design, and SEO services. All projects are subject to an individual statement of work or proposal outlining specific deliverables, timelines, and payment structures.
             </p>
-            <h2 className="text-2xl text-white font-medium mt-8 mb-4">2. Intellectual Property</h2>
+
+            <h2 className="text-2xl text-white font-medium mt-8 mb-4">2. Payment Terms</h2>
             <p>
-              The Service and its original content, features, and functionality are and will remain the exclusive property of Ron Lenser Digital 
-              and its licensors. The Service is protected by copyright, trademark, and other laws of both the Country and foreign countries.
+              Unless otherwise specified in a formal proposal, a standard non-refundable deposit is required before any development work begins. The remaining balance is due upon project completion or predetermined milestones. We reserve the right to suspend services or withhold final deliverables if payments are not made according to the agreed schedule.
             </p>
-            <h2 className="text-2xl text-white font-medium mt-8 mb-4">3. Limitation of Liability</h2>
+
+            <h2 className="text-2xl text-white font-medium mt-8 mb-4">3. Intellectual Property</h2>
             <p>
-              Notwithstanding any damages that You might incur, the entire liability of the Company and any of its suppliers under any provision of this 
-              Terms and Your exclusive remedy for all of the foregoing shall be limited to the amount actually paid by You through the Service.
+              Upon final payment of all outstanding invoices, the intellectual property rights to the final delivered website, design, and code will be transferred to the client. Ron Lenser Digital retains the right to display the completed project in our portfolio and marketing materials unless a non-disclosure agreement (NDA) has been explicitly signed. We retain full ownership of any pre-existing code libraries, internal tools, or base architectures used during development.
             </p>
-            <h2 className="text-2xl text-white font-medium mt-8 mb-4">4. Governing Law</h2>
+
+            <h2 className="text-2xl text-white font-medium mt-8 mb-4">4. Revisions and Scope Creep</h2>
             <p>
-              The laws of the Country, excluding its conflicts of law rules, shall govern this Terms and Your use of the Service. 
-              Studio Location: Fredericksburg, VA.
+              Each project includes a specified number of revision rounds. Requests that fall outside the original scope of work will be billed at our standard hourly rate or quoted as a separate phase of the project.
+            </p>
+
+            <h2 className="text-2xl text-white font-medium mt-8 mb-4">5. Limitation of Liability</h2>
+            <p>
+              Notwithstanding any damages that you might incur, the entire liability of Ron Lenser Digital and its suppliers under any provision of these Terms, and your exclusive remedy for all of the foregoing, shall be limited to the amount actually paid by you for the specific service in dispute. We are not liable for any indirect, incidental, or consequential business losses.
+            </p>
+
+            <h2 className="text-2xl text-white font-medium mt-8 mb-4">6. Governing Law</h2>
+            <p>
+              The laws of the Commonwealth of Virginia, United States, excluding its conflicts of law rules, shall govern these Terms and your use of the Service. Any disputes arising from this agreement shall be resolved in the courts located in Virginia.
             </p>
           </div>
         </FadeIn>

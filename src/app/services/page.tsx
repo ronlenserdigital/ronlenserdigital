@@ -60,7 +60,7 @@ export default function ServicesPage() {
               },
               {
                 title: "Conversion Architecture",
-                desc: "Every pixel is placed with a psychological purpose. We guide the user from their first click straight to your checkout or booking form.",
+                desc: "Every pixel is placed with a psychological purpose. I guide the user from their first click straight to your checkout or booking form.",
                 tags: ["CRO", "Copywriting", "UX/UI Design"],
               },
             ].map((service, index) => (
